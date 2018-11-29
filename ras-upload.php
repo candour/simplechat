@@ -1,5 +1,5 @@
 <?php
-$target_dir = "/var/www/semmens.info/web/uploads/";
+$target_dir = "uploads/";
 $target_dir = $target_dir . basename( $_FILES["uploadFile"]["name"]);
 $uploadOk=1;
 
@@ -15,7 +15,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else { 
     if (move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $target_dir)) {
-        echo "The file <a href=\"http://semmens.info/uploads/". basename( $_FILES["uploadFile"]["name"]). "\">Picture</a> has been uploaded.";
+        echo "The file <a href=\"uploads/". basename( $_FILES["uploadFile"]["name"]). "\">Picture</a> has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";
         echo $_FILES["uploadFile"]["error"];

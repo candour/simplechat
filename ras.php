@@ -5,7 +5,7 @@
 
 <br />
 <?php
-$upload_dir = '/var/www/semmens.info/web/uploads';
+$upload_dir = 'uploads';
 if (is_dir($upload_dir) && is_writable($upload_dir)) {
   echo "Can upload";
 } else {
